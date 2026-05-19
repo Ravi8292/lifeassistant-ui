@@ -1,0 +1,89 @@
+<div class="container">
+  <h2 class="title">My Tasks.</h2>
+  <div>
+  <input
+  type="text"
+  placeholder="🔍 Search tasks..."
+  [(ngModel)]="searchText"
+  (input)="onSearch()"
+  class="search-input"
+/>
+</div>
+<div class="ai-box">
+  <textarea
+    placeholder="🤖 Describe your task..."
+    [(ngModel)]="aiText" [disabled]="isLoading">
+  </textarea>
+  <div class="button-group" style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <button (click)="startVoiceAssistant()" class="btn btn-secondary">
+      {{ isListening ? '🛑 Listening...' : '🎤 Voice' }}
+    </button>
+  <button (click)="createTaskWithAI()" [disabled]="isLoading" class="btn create-ai-btn mb-2">
+    @if(!isLoading){
+    <span>✨ Create with AI</span>
+    } @if(isLoading){
+    <span >⏳ Thinking...</span>} </button>
+</div>
+</div>
+<div>
+  <a routerLink="/create">
+    <button class="btn create-task-btn">➕ Create Task</button>
+  </a>
+  </div>
+
+  <div class="filter-bar">
+    <label for="status">Filter Tasks:</label>
+    <select id="status" (change)="onStatusChange($event)">
+      <option value="ALL">All</option>
+      <option value="PENDING">Pending</option>
+      <option value="DONE">Done</option>
+    </select>
+  </div>
+
+  @if (isLoading) {
+    <p>Loading your tasks...</p>
+  } 
+  @else if (tasks.length === 0) {
+    <p class="empty">No Tasks Found.</p>
+  }
+  @else {
+    @for (task of tasks; track task.id) {
+      <div class="task-card">
+        
+        @if (editingTaskId !== task.id) {
+          <h3>{{ task.title }}</h3>
+          <p>{{ task.description }}</p>
+          <p>Due: {{ task.dueDate }}</p>
+          <p>
+            Status:
+            <strong [style.color]="task.status === 'DONE' ? 'green' : 'orange'">
+              {{ task.status }}
+            </strong>
+          </p>
+
+        
+
+          @if (task.status === 'PENDING') {
+            <button (click)="editTask(task)">✏️ Edit</button>
+            <button (click)="markAsDone(task.id)">✅ Mark as Done.</button>
+          }
+
+          <button class="btn-delete" (click)="deleteTask(task.id)">🗑️ Delete</button>
+        } 
+        @else {
+          <div class="edit-form">
+            <input [(ngModel)]="task.title" placeholder="Title" class="edit-input" />
+            <textarea [(ngModel)]="task.description" placeholder="Description"></textarea>
+            <input type="date" [(ngModel)]="task.dueDate" />
+
+            <div class="edit-actions">
+              <button (click)="saveTask(task)">💾 Save</button>
+              <button (click)="cancelEdit()">❌ Cancel</button>
+            </div>
+          </div>
+        }
+
+      </div>
+    }
+  }
+</div>

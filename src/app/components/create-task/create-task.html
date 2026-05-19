@@ -1,0 +1,34 @@
+<div class="container">
+  <br>
+  <h2>Create Task</h2>
+  <br>
+  <form (ngSubmit)="submitTask()">
+    
+    <input
+      type="text"
+      placeholder="Title"
+      [(ngModel)]="task.title"
+      name="title"
+      required
+    />
+
+    <textarea
+      placeholder="Description"
+      [(ngModel)]="task.description"
+      name="description">
+    </textarea>
+
+    <input
+      type="date"
+      [(ngModel)]="task.dueDate"
+      name="dueDate"
+      required
+    />
+
+    <button type="submit">Create Task</button>
+    <button type="button" class="btn-back" (click)="goBack()">
+    ⬅️ Back
+  </button>
+
+  </form>
+</div>

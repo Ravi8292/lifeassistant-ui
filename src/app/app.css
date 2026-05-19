@@ -1,0 +1,15 @@
+/* Container styling to center everything */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #2d3436;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #2d3748;
+}

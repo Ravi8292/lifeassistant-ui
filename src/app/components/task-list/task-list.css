@@ -1,0 +1,272 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.task-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.task-card h3 {
+  margin: 0 0 6px 0;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+}
+
+.status {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.status.done {
+  color: green;
+}
+
+.done-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.done-btn:hover {
+  background-color: #218838;
+}
+
+.empty {
+  color: #777;
+  font-style: italic;
+}
+.btn-delete {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-delete:hover {
+  background-color: #cc0000;
+}
+/* Container Layout */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Filter Bar Styling */
+.filter-bar {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Task Card Design */
+.task-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Status Badges */
+.status-text {
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Color logic for status */
+.status-pending {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-done {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-create {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.btn-delete {
+  background-color: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  margin-left: 10px;
+}
+
+.btn-delete:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.loading-text {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/*search css start*/
+.search-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px 12px 40px; /* Space for icon */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.1);
+}
+/* search css ended here*/
+/*ai css start*/
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Create with AI - Gradient Style */
+.btn-ai {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-ai:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+/* Standard Create Task - Outline/Minimal Style */
+.btn-create {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  color: #2d3436;
+  border: 1px solid #dfe6e9;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-create:hover {
+  background: #f1f2f6;
+  border-color: #b2bec3;
+}
+/*ai css end*/
+
+/*ai textarea*/
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  border: 1px solid #dfe6e9;
+  border-radius: 12px;
+  resize: vertical;
+  font-family: inherit;
+  margin-top: 10px;
+  background: #ffffff;
+}
+/*ai textarea end*/
+.create-ai-btn {
+    margin-bottom: 15px; /* Adjust this value for more or less space */
+    width: 100%;        /* Optional: Makes the button full width like the textarea */
+}

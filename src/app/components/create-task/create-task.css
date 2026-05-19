@@ -1,0 +1,42 @@
+/* Form Layout */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #edf2f7;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4299e1;
+  outline: none;
+}
+
+/* Action Buttons */
+.btn-primary {
+  background: #4a90e2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-delete {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+}
