@@ -1,201 +1,81 @@
-.container {
-  max-width: 700px;
+/* Core Layout Container & Global Typography overrides */
+.app-container {
+  max-width: 850px;
   margin: 40px auto;
-  font-family: Arial, sans-serif;
-}
-
-.title {
-  margin-bottom: 20px;
-}
-
-.task-card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.task-card h3 {
-  margin: 0 0 6px 0;
-}
-
-.desc {
-  color: #555;
-  margin-bottom: 8px;
-}
-
-.meta {
-  font-size: 13px;
-  color: #777;
-}
-
-.status {
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.status.done {
-  color: green;
-}
-
-.done-btn {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.done-btn:hover {
-  background-color: #218838;
-}
-
-.empty {
-  color: #777;
-  font-style: italic;
-}
-.btn-delete {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.btn-delete:hover {
-  background-color: #cc0000;
-}
-/* Container Layout */
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  padding: 0 24px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3436;
 }
 
-.title {
-  color: #333;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+/* App Beautiful Text Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 35px;
 }
 
-/* Filter Bar Styling */
-.filter-bar {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Consolidated Workspace Panel Structure */
+.control-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Clean Dynamic Search Layout Bar */
+.search-box {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.filter-bar select {
-  padding: 8px 12px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  background-color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Task Card Design */
-.task-grid {
-  display: grid;
-  gap: 15px;
-}
-
-.task-card {
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  position: relative;
-}
-
-.task-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Status Badges */
-.status-text {
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-
-/* Color logic for status */
-.status-pending {
-  background-color: #fff3e0;
-  color: #ef6c00;
-}
-
-.status-done {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-/* Buttons */
-button {
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.btn-create {
-  background-color: #007bff;
-  color: white;
-  margin-bottom: 15px;
-}
-
-.btn-delete {
-  background-color: #fff;
-  color: #dc3545;
-  border: 1px solid #dc3545;
-  margin-left: 10px;
-}
-
-.btn-delete:hover {
-  background-color: #dc3545;
-  color: white;
-}
-
-.loading-text {
-  text-align: center;
-  color: #666;
-  font-style: italic;
-}
-
-/*search css start*/
-.search-container {
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .search-input {
   width: 100%;
-  padding: 12px 15px 12px 40px; /* Space for icon */
+  padding: 14px 15px 14px 44px;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 14px;
   transition: all 0.3s ease;
   background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.search-box .icon-search {
+  position: absolute;
+  left: 16px;
+  color: #777;
+  font-style: normal;
 }
 
 .search-input:focus {
@@ -204,57 +84,9 @@ button:hover {
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(108, 92, 231, 0.1);
 }
-/* search css ended here*/
-/*ai css start*/
-.button-group {
-  display: flex;
-  gap: 12px;
-  margin-top: 15px;
-}
 
-/* Create with AI - Gradient Style */
-.btn-ai {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-ai:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
-}
-
-/* Standard Create Task - Outline/Minimal Style */
-.btn-create {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background: white;
-  color: #2d3436;
-  border: 1px solid #dfe6e9;
-  border-radius: 25px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-create:hover {
-  background: #f1f2f6;
-  border-color: #b2bec3;
-}
-/*ai css end*/
-
-/*ai textarea*/
-textarea {
+/* AI Workspace Elements */
+.ai-input-wrapper textarea {
   width: 100%;
   min-height: 120px;
   padding: 15px;
@@ -262,11 +94,265 @@ textarea {
   border-radius: 12px;
   resize: vertical;
   font-family: inherit;
-  margin-top: 10px;
+  font-size: 14px;
   background: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
 }
-/*ai textarea end*/
-.create-ai-btn {
-    margin-bottom: 15px; /* Adjust this value for more or less space */
-    width: 100%;        /* Optional: Makes the button full width like the textarea */
+
+.ai-input-wrapper textarea:focus {
+  outline: none;
+  border-color: #6c5ce7;
+}
+
+/* Master Button System Styles */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+button, .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Create with AI - Primary Gradient Button Style */
+.btn-primary.btn-ai {
+  flex: 1.5;
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(108, 92, 231, 0.25);
+}
+
+.btn-primary.btn-ai:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+.btn-primary.btn-ai:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Voice Option Button style */
+.btn-secondary.btn-voice {
+  flex: 1;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.btn-secondary.btn-voice:hover {
+  background: #e2e8f0;
+}
+
+/* Manual Mode Trigger */
+.manual-creation {
+  margin-top: 4px;
+}
+
+.btn-outline-primary {
+  background: white;
+  color: #2d3436;
+  border: 1px solid #dfe6e9;
+  width: 100%;
+}
+
+.btn-outline-primary:hover {
+  background: #f1f2f6;
+  border-color: #b2bec3;
+}
+
+/* Filter Configuration Panel */
+.filter-bar {
+  background-color: #f8f9fa;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.filter-bar label {
+  font-weight: 700;
+  color: #475569;
+  font-size: 14px;
+}
+
+.select-wrapper select {
+  padding: 8px 32px 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Active Core Grid and Task Cards Rendering matrix */
+.task-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 6px solid #cbd5e1;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.task-card.status-pending { border-left-color: #ef6c00; }
+.task-card.status-done { border-left-color: #2e7d32; }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Contextual Status Badges */
+.status-badge {
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-pending .status-badge {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-done .status-badge {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.task-desc {
+  color: #555;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* Card Control Footer Options */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #edf2f7;
+  padding-top: 14px;
+}
+
+.meta-date {
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.action-btn.edit:hover { background: #f8fafc; border-color: #6c5ce7; color: #6c5ce7; }
+.action-btn.done:hover { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+.action-btn.delete { background: #fff; color: #dc3545; border: 1px solid #dc3545; }
+.action-btn.delete:hover { background: #dc3545; color: white; }
+
+/* Dynamic Context Handling Layout Feedback */
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+  color: #666;
+  font-style: italic;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f1f5f9;
+  border-top-color: #6c5ce7;
+  border-radius: 50%;
+  margin: 0 auto 12px auto;
+  animation: rotateSpinner 0.8s linear infinite;
+}
+
+@keyframes rotateSpinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Inline Form Editor Layout Controls */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-input, .edit-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.edit-actions button {
+  padding: 6px 14px;
+  border-radius: 6px;
 }

@@ -1,34 +1,61 @@
-<div class="container">
-  <br>
-  <h2>Create Task</h2>
-  <br>
-  <form (ngSubmit)="submitTask()">
-    
-    <input
-      type="text"
-      placeholder="Title"
-      [(ngModel)]="task.title"
-      name="title"
-      required
-    />
+<div class="app-container narrow-form">
+  <header class="app-header">
+    <h1>Create Task <span class="badge">Manual Mode</span></h1>
+    <p class="subtitle">Add a new item directly to your schedule</p>
+  </header>
 
-    <textarea
-      placeholder="Description"
-      [(ngModel)]="task.description"
-      name="description">
-    </textarea>
+  <main class="main-content">
+    <div class="control-panel form-card">
+      <form (ngSubmit)="submitTask()">
+        
+        <div class="form-group">
+          <label for="task-title">Task Title <span class="required">*</span></label>
+          <input
+            id="task-title"
+            type="text"
+            placeholder="What needs to be done?"
+            [(ngModel)]="task.title"
+            name="title"
+            required
+            class="form-input"
+          />
+        </div>
 
-    <input
-      type="date"
-      [(ngModel)]="task.dueDate"
-      name="dueDate"
-      required
-    />
+        <div class="form-group">
+          <label for="task-desc">Detailed Description</label>
+          <textarea
+            id="task-desc"
+            placeholder="Add extra context, details, or steps..."
+            [(ngModel)]="task.description"
+            name="description"
+            rows="4"
+            class="form-input">
+          </textarea>
+        </div>
 
-    <button type="submit">Create Task</button>
-    <button type="button" class="btn-back" (click)="goBack()">
-    ⬅️ Back
-  </button>
+        <div class="form-group">
+          <label for="task-date">Target Due Date <span class="required">*</span></label>
+          <input
+            id="task-date"
+            type="date"
+            [(ngModel)]="task.dueDate"
+            name="dueDate"
+            required
+            class="form-input"
+          />
+        </div>
 
-  </form>
+        <div class="form-actions-row">
+          <button type="button" class="btn btn-secondary btn-back-nav" (click)="goBack()">
+            ⬅️ Back to Dashboard
+          </button>
+          
+          <button type="submit" class="btn btn-primary btn-submit">
+            🚀 Create Task
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
 </div>
